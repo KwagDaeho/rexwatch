@@ -1,0 +1,117 @@
+$header-height : 64px
+  
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  list-style: none
+  transition: 0.1s
+  transition-delay: 0s
+  text-decoration: none
+a, a:hover 
+  color: inherit
+  text-decoration: none
+body
+  height: 100vh
+  padding-block: 100px
+  >h1, main
+    padding-inline: 10%
+img
+  vertical-align: middle
+table 
+  width: 100%
+  border-collapse: collapse
+  border-spacing: 0
+header
+  z-index: 20
+  // height: $header-height
+  height: $header-height
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  padding-inline: 10%
+  .header-wrap
+    width: 100%
+    display: flex
+    justify-content: space-between
+    padding-inline: 16px
+    h2
+      margin-right: 30px
+    #header_gnb_wrap
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      height: $header-height
+      #header_gnb
+        display: flex
+        gap: 12px
+        .MuiButtonBase-root
+          min-width: 150px
+          border-radius: 20px
+          padding: 0
+          transition: color 0s
+          font-size: 16px
+          font-weight: 700
+          &:hover, &:hover>*
+            color: #fff
+            filter: drop-shadow(2px 2px 8px rgba(255,255,255,0.7))
+          >*
+            transition: color 0s
+          a
+            display: inline-block
+            width: 100%
+            height: 100%
+            padding: 3px 30px
+            
+
+      button
+        margin-left: initial
+    li, a
+      display: block
+      font-size: 1em
+      font-weight: 700
+
+main
+  max-height: calc( 100vh - 150px )
+  overflow-y: auto
+  &::-webkit-scrollbar
+    display: none
+    width: 6px
+    border-radius: 10px
+    background: rgba(0,0,0,0)
+  &::-webkit-scrollbar-thumb
+    display: none
+    border-radius: 10px
+    background: rgba(105,125,220,0.5)
+#canvas_wrap
+  &::-webkit-scrollbar, &::-webkit-scrollbar-thumb
+    display: none
+#detection_area_wrap
+  svg
+    cursor: pointer
+    border: 1px solid transparent
+    &:hover
+      border-color: #2477ec
+#screenshot
+  canvas
+    position: absolute
+    left: 0
+    top: 0
+    
+// -----------------------------------
+// Responsive - Tablet
+@media screen and (min-width:768px)
+  .on-mo
+    display: none
+  .wrap
+    // width: $wrap-size
+
+// -----------------------------------
+// Responsive - PC
+@media screen and (min-width:1280px)
+  body
+    // font-size: $size2
+  .on-tb
+    display: none

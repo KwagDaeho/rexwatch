@@ -1,0 +1,21 @@
+.calendar {
+  display: flex;
+  height: 100px;
+  overflow-x: scroll;
+  border-top: 1px solid black;
+}
+
+.hour {
+  flex: none;
+  width: 60px;
+  border-right: 1px solid black;
+  position: relative;
+}
+
+.event {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: lightblue;
+  text-align: center;
+}
